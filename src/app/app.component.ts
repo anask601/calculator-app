@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  OnScreen() {}
+  display: string = '';
 
   OnEnteredValue(num: string) {
-    console.log(num);
+    if (num === '*' || num === '-' || num === '+' || num === '/') {
+      this.display = num;
+    }
   }
 }

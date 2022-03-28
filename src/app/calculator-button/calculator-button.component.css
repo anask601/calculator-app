@@ -1,0 +1,14 @@
+.white {
+  background-color: whitesmoke;
+}
+.purple {
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+
+.red {
+  background-color: rgb(255, 7, 7);
+}
+
+.size {
+  width: 10px;
+}
