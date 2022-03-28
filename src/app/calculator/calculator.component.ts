@@ -13,6 +13,27 @@ export class CalculatorComponent implements OnInit {
 
   ngOnInit(): void {}
   showWhichButtonHasBeenClicked(e: any) {
-    this.parentValue += e;
+    switch (e.action) {
+      case 'clearAll': {
+        this.clearInput();
+        break;
+      }
+      default: {
+        this.parentValue += e.value;
+        break;
+      }
+    }
+  }
+
+  clearInput() {
+    this.parentValue = '';
+  }
+
+  calculateResult() {
+    console.log(eval(this.parentValue));
+    if (this.parentValue === undefined) {
+      return;
+    }
+    this.parentValue = eval(this.parentValue);
   }
 }

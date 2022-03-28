@@ -10,4 +10,8 @@
     [valueToShowOnButton]="button"
     (buttonClicked)="showWhichButtonHasBeenClicked($event)"
   ></app-calculator-button>
+  <app-calculator-button
+    [valueToShowOnButton]="{ value: '=', color: 'red' }"
+    (buttonClicked)="calculateResult()"
+  ></app-calculator-button>
 </div>
