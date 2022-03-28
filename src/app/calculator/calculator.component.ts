@@ -30,7 +30,6 @@ export class CalculatorComponent implements OnInit {
   }
 
   calculateResult() {
-    console.log(eval(this.parentValue));
     if (this.parentValue === undefined) {
       return;
     }
