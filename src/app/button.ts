@@ -64,9 +64,4 @@ export const buttons = [
     color: 'red',
     action: 'clearAll',
   },
-  {
-    value: '=',
-    color: 'red',
-    action: 'action',
-  },
 ];
