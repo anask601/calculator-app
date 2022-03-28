@@ -33,15 +33,15 @@ export const buttons = [
   },
   {
     value: '1',
-    color: 'purple',
+    color: 'white',
   },
   {
     value: '2',
-    color: 'purple',
+    color: 'white',
   },
   {
     value: '3',
-    color: 'purple',
+    color: 'white',
   },
   {
     value: '-',
@@ -53,7 +53,7 @@ export const buttons = [
   },
   {
     value: '0',
-    color: 'purple',
+    color: 'white',
   },
   {
     value: '+',

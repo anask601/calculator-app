@@ -1,18 +1,13 @@
-<section>
-  <div
-    class="h-screen mx-auto mt-10 overflow-hidden bg-gray-900 rounded-lg w-200"
-  >
-    <div
-      class="flex items-center w-full h-16 pl-2 space-x-2 text-3xl font-bold text-gray-200"
-    >
-      <app-header></app-header>
-    </div>
-    <app-calculator-display></app-calculator-display>
-    <div class="grid grid-cols-4 gap-2 mx-3 mt-10">
-      <app-calculator-button
-        *ngFor="let button of buttons"
-        [valueToShowOnButton]="button"
-      ></app-calculator-button>
-    </div>
-  </div>
-</section>
+<div
+  class="flex items-center w-full h-16 pl-2 space-x-2 text-3xl font-bold text-gray-200"
+>
+  <app-header></app-header>
+</div>
+<app-calculator-display [parentValue]="parentValue"></app-calculator-display>
+<div class="grid grid-cols-4 gap-2 mx-3 mt-10">
+  <app-calculator-button
+    *ngFor="let button of buttons"
+    [valueToShowOnButton]="button"
+    (buttonClicked)="showWhichButtonHasBeenClicked($event)"
+  ></app-calculator-button>
+</div>

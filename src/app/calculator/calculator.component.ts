@@ -8,8 +8,11 @@ import { buttons } from '../button';
 })
 export class CalculatorComponent implements OnInit {
   buttons = buttons;
-
+  parentValue: string = '';
   constructor() {}
 
   ngOnInit(): void {}
+  showWhichButtonHasBeenClicked(e: any) {
+    this.parentValue += e;
+  }
 }
