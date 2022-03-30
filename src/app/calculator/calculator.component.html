@@ -4,14 +4,16 @@
   <app-header></app-header>
 </div>
 <app-calculator-display [parentValue]="parentValue"></app-calculator-display>
-<div class="grid grid-cols-4 gap-2 mx-3 mt-10">
-  <app-calculator-button
-    *ngFor="let button of buttons"
-    [valueToShowOnButton]="button"
-    (buttonClicked)="showWhichButtonHasBeenClicked($event)"
-  ></app-calculator-button>
-  <app-calculator-button
-    [valueToShowOnButton]="{ value: '=', color: 'red' }"
-    (buttonClicked)="calculateResult()"
-  ></app-calculator-button>
-</div>
+<section>
+  <div class="grid grid-cols-4 gap-2 mx-3 mt-10">
+    <app-calculator-button
+      *ngFor="let button of buttons"
+      [valueToShowOnButton]="button"
+      (buttonClicked)="showWhichButtonHasBeenClicked($event)"
+    ></app-calculator-button>
+    <app-calculator-button
+      [valueToShowOnButton]="{ value: '=', color: 'red' }"
+      (buttonClicked)="calculateResult()"
+    ></app-calculator-button>
+  </div>
+</section>

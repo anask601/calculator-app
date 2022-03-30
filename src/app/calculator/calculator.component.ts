@@ -9,10 +9,17 @@ import { buttons } from '../button';
 export class CalculatorComponent implements OnInit {
   buttons = buttons;
   parentValue: string = '';
+  actionPerform = false;
+
   constructor() {}
 
   ngOnInit(): void {}
   showWhichButtonHasBeenClicked(e: any) {
+    if (this.actionPerform) {
+      this.actionPerform = false;
+      this.parentValue = '';
+    }
+
     switch (e.action) {
       case 'clearAll': {
         this.clearInput();
@@ -31,9 +38,7 @@ export class CalculatorComponent implements OnInit {
 
   calculateResult() {
     console.log(this.parentValue);
-    if (this.parentValue === '') {
-      return;
-    }
     this.parentValue = eval(this.parentValue);
+    this.actionPerform = true;
   }
 }
